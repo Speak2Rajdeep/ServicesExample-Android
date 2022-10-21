@@ -32,6 +32,5 @@ public class MainActivity extends AppCompatActivity {
                 stopService(new Intent(MainActivity.this, MyService.class));
             }
         });
-
     }
 }
