@@ -23,7 +23,8 @@ public class MyService extends Service {
         mediaPlayer.setLooping(true);
         mediaPlayer.start();
         Toast.makeText(this, "Service Started", Toast.LENGTH_SHORT).show();
-        return START_STICKY;
+        //Plays the Music even the app Destroys!
+        return START_CONTINUATION_MASK;
     }
 
     @Override
