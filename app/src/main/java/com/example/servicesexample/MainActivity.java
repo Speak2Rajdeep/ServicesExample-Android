@@ -1,13 +1,11 @@
 package com.example.servicesexample;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,15 +19,17 @@ public class MainActivity extends AppCompatActivity {
         start = (Button) findViewById(R.id.startService);
         stop = (Button) findViewById(R.id.stopService);
 
+        //Starting the Service
         start.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startService(new Intent(MainActivity.this,MyService.class));
+                startService(new Intent(MainActivity.this, MyService.class));
             }
         });
 
+        //Stopping a Service
         stop.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                stopService(new Intent(MainActivity.this,MyService.class));
+                stopService(new Intent(MainActivity.this, MyService.class));
             }
         });
 
